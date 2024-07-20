@@ -7,7 +7,10 @@
   <title>占い</title>
 </head>
 <body>
-  <h1>凶です！！☹️</h1>
-  <a href="/" class="button">Try Again</a>
+  <h1>あなたの今日の運勢はどうですか</h1>
+  <h2 th:text="${today}"></h2>
+  <form action="/fortune" method="get">
+    <button type="submit">GO!  🎲</button>
+  </form>
 </body>
 </html>
