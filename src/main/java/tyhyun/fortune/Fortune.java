@@ -32,4 +32,6 @@ public class Fortune {
       return "noFortune.html";
     }
   }
+
+
 }
