@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <title>占い</title>
+</head>
+<body>
+    <h2 th:text="${fortune}"></h2>
+    <h3 th:text="${message}"></h3>
+    <a href="/" class="button">Try Again</a>
+</body>
+</html>
