@@ -19,16 +19,16 @@ public class FortuneService {
     "小吉です！！😀",
     "凶です！！👊🏻"
   );
+  private final Random rand = new Random();
 
   public String getRandomFortune(){
-    Random rand = new Random();
     return fortunes.get(rand.nextInt(fortunes.size()));
   }
 
   public String getRandomMessage(){
-    Random rand = new Random();
-    fortunes.get(rand.nextInt(fortunes.size()));
-
     return messageList.get(rand.nextInt(messageList.size()));
   }
+  public String getPersonalizedMessage(String name) {
+    return name + "さん、" + getRandomMessage();
+}
 }

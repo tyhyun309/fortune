@@ -4,6 +4,7 @@ body {
   padding: 20px;
   background-color: #f0f0f0;
   text-align: center;
+  margin: 10px;
 }
 
 h1 {
@@ -19,4 +20,9 @@ button, .button {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+}
+
+input {
+  padding: 10px;
+  border: 0px;
 }

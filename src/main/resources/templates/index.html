@@ -10,7 +10,11 @@
   <h1>あなたの今日の運勢はどうですか</h1>
   <h2 th:text="${today}"></h2>
   <form action="/fortune" method="get">
-    <button type="submit">GO!  🎲</button>
+    <label for="name">名前：</label>
+    <input type="text" id="name" name="name" required>
+    <p>
+      <button type="submit">GO!  🎲</button>
+    </p>
   </form>
 </body>
 </html>

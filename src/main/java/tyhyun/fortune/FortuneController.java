@@ -27,15 +27,14 @@ public class FortuneController {
   }
 
   @RequestMapping("/fortune")
-  public String getFortune(Model model) {
+  public String getFortune(Model model, String name) {
+    model.addAttribute("name", name);
     String fortune = fortuneService.getRandomFortune();
     model.addAttribute("fortune", fortune);
     String message = fortuneService.getRandomMessage();
     model.addAttribute("message", message);
     return "fortune.html";
   }
-
-
 
 
   // @RequestMapping("/fortune")
@@ -50,9 +49,5 @@ public class FortuneController {
   //   } else {
   //     return "noFortune.html";
   //   }
-
-
-
-
 
 }
