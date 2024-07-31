@@ -27,8 +27,12 @@ public class FortuneController {
   }
 
   @RequestMapping("/fortune")
-  public String getFortune(Model model, String name) {
+  public String getFortune(Model model, String name, String birthday) {
     model.addAttribute("name", name);
+    LocalDate birthdayDate = LocalDate.parse(birthday);
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日(E)", Locale.JAPANESE);
+    String formattedBirthday = birthdayDate.format(formatter);
+    model.addAttribute("birthday", formattedBirthday);
     String fortune = fortuneService.getRandomFortune();
     model.addAttribute("fortune", fortune);
     String message = fortuneService.getRandomMessage();

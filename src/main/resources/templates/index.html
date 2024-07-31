@@ -12,6 +12,8 @@
   <form action="/fortune" method="get">
     <label for="name">名前：</label>
     <input type="text" id="name" name="name" required>
+    <label for="birthday">お誕生日：</label>
+    <input type="date" id="birthday" name="birthday" th:max="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" min="1910-01-01" required>
     <p>
       <button type="submit">GO!  🎲</button>
     </p>
